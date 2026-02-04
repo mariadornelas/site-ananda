@@ -57,13 +57,13 @@ export default function Home() {
           <ul style={{ display: "flex", listStyle: "none", gap: "1.5rem", alignItems: "center" }}>
             {["Home", "Sobre Mim", "Posso te ajudar?", "Dúvidas Frequentes"].map((item) => (
               <li key={item}>
-                <a 
-                  href={`#${item.toLowerCase()}`} 
-                  style={{ 
-                    textDecoration: "none", 
-                    color: "#666", 
-                    fontSize: "14px", 
-                    textTransform: "uppercase" 
+                <a
+                  href={`#${item.toLowerCase()}`}
+                  style={{
+                    textDecoration: "none",
+                    color: "#666",
+                    fontSize: "14px",
+                    textTransform: "uppercase"
                   }}
                 >
                   {item}
@@ -74,104 +74,167 @@ export default function Home() {
         </nav>
       </header>
 
-      <section 
-        id="inicio" 
-        className="hero"
-        style={{ 
-          height: "85vh",
+      <section
+        id="inicio"
+        style={{
+          minHeight: "85vh",
           display: "flex",
           alignItems: "center",
-          justifyContent: "center",
-          textAlign: "center",
-          padding: "0 10%",
-          backgroundColor: "#FAF9F6"
+          justifyContent: "space-between",
+          padding: "0 20%",
+          backgroundColor: "#FAF9F6",
+          gap: "2rem",
+          flexWrap: "wrap"
         }}
       >
-        <div>
-          <h1 style={{ 
-            fontSize: "clamp(2rem, 5vw, 3.5rem)",
-            color: "#1a1a1a",
-            marginBottom: "20px",
-            lineHeight: "1.2"
-          }}>
-            Acolho histórias de <span style={{ color: "#B89470", fontStyle: "italic" }}>Mulheres</span> através da terapia cognitivo comportamental
+        {/* TEXTO */}
+        <div style={{ maxWidth: "520px" }}>
+          <h1
+            style={{
+              fontSize: "clamp(2.2rem, 4vw, 3rem)",
+              color: "#8FAF7C",
+              fontWeight: "700",
+              lineHeight: "1.25",
+              marginBottom: "20px"
+            }}
+          >
+            PSICÓLOGA ONLINE<br />
+            ESPECIALIZADA EM<br />
+            MULHERES EXAUSTAS
           </h1>
-          
-          <div style={{ 
-            width: "50px", 
-            height: "2px", 
-            background: "#B89470",
-            margin: "0 auto 30px"
-          }}></div>
-          
-          <p style={{ 
-            fontSize: "18px",
-            color: "#777",
-            maxWidth: "650px",
-            margin: "0 auto 40px",
-            lineHeight: "1.6"
-          }}>
-            Para mulheres que fazem muito, sentem demais e vivem no limite. Aqui, a terapia é estruturada e baseada em evidências, com foco em clareza emocional, regulação dos sintomas e estratégias práticas para a vida real.
+
+          <p
+            style={{
+              fontSize: "15px",
+              color: "#8FAF7C",
+              marginBottom: "20px"
+            }}
+          >
+            Para mulheres que fazem muito, sentem demais e vivem no limite.
           </p>
-          
-          <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <a 
-              href="https://wa.me/55999999999" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="btn-whatsapp"
-              style={{
-                backgroundColor: "#B89470",
-                color: "white",
-                padding: "18px 35px",
-                borderRadius: "50px",
-                textDecoration: "none",
-                fontWeight: "bold",
-                fontSize: "16px",
-                boxShadow: "0 10px 20px rgba(184, 148, 112, 0.2)",
-                transition: "all 0.3s ease"
-              }}
-              onMouseOver={(e) => {
-                e.currentTarget.style.backgroundColor = "#a38363";
-                e.currentTarget.style.transform = "translateY(-2px)";
-              }}
-              onMouseOut={(e) => {
-                e.currentTarget.style.backgroundColor = "#B89470";
-                e.currentTarget.style.transform = "translateY(0)";
-              }}
-            >
-              Agendar sessão
-            </a>
-          </div>
+
+          <p
+            style={{
+              fontSize: "16px",
+              color: "#6f6f6f",
+              lineHeight: "1.7",
+              marginBottom: "35px"
+            }}
+          >
+            Aqui, a terapia é <strong>estruturada</strong> e baseada em evidências,
+            com foco em <strong>clareza emocional</strong>,{" "}
+            <strong>regulação dos sintomas</strong> e{" "}
+            <strong>estratégias práticas</strong> para a vida real — mesmo com pouco
+            tempo, muita responsabilidade e quase nenhuma energia sobrando.
+          </p>
+
+          <a
+            href="https://wa.me/55999999999"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-block",
+              backgroundColor: "#FFA000",
+              color: "#fff",
+              padding: "16px 32px",
+              borderRadius: "999px",
+              textDecoration: "none",
+              fontWeight: "600",
+              fontSize: "15px",
+              transition: "all 0.3s ease",
+              boxShadow: "0 8px 20px rgba(255,160,0,0.25)"
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.backgroundColor = "#e89000";
+              e.currentTarget.style.transform = "translateY(-2px)";
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.backgroundColor = "#FFA000";
+              e.currentTarget.style.transform = "translateY(0)";
+            }}
+          >
+            Quero organizar minha vida agora!
+          </a>
         </div>
+
+        {/* IMAGEM */}
+        <div
+          style={{
+            position: "relative",
+            maxWidth: "420px",
+            width: "100%",
+          }}
+        >
+          {/* Shape decorativo */}
+          <div
+            style={{
+              position: "absolute",
+              top: "12px",
+              left: "12px",
+              right: "-12px",
+              bottom: "-12px",
+              borderRadius: "28px",
+              background: "linear-gradient(145deg, #9CB58B, #8FAF7C)",
+              opacity: 0.9,
+              zIndex: 0
+            }}
+          />
+
+          {/* Sombra suave */}
+          <div
+            style={{
+              position: "absolute",
+              inset: "0",
+              borderRadius: "28px",
+              boxShadow: "0 25px 60px rgba(0,0,0,0.12)",
+              zIndex: 0
+            }}
+          />
+
+          {/* Imagem */}
+          <img
+            src="/foto-ananda.jpeg"
+            alt="Psicóloga Ananda"
+            style={{
+              width: "100%",
+              borderRadius: "24px",
+              position: "relative",
+              zIndex: 1,
+              objectFit: "cover",
+              backgroundColor: "#eee"
+            }}
+          />
+        </div>
+
       </section>
 
+
       {/* Sobre Section */}
-      <section 
-        id="sobre" 
+      <section
+        id="sobre"
         className="section-white"
-        style={{ 
-          padding: "100px 10%", 
+        style={{
+          padding: "100px 10%",
           backgroundColor: "white",
           textAlign: "center"
         }}
       >
         <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
-          <h2 style={{ 
-            fontSize: "28px", 
-            marginBottom: "20px", 
+          <h2 style={{
+            fontSize: "28px",
+            marginBottom: "20px",
             color: "#1a1a1a"
           }}>
-            Quem é a Psi Amanda Barbacena
+            Quem é a Psicóloga Ananda Motta
           </h2>
-          
-          <div style={{ 
-            width: "50px", 
-            height: "2px", 
+
+          <div style={{
+            width: "50px",
+            height: "2px",
             background: "#B89470",
             margin: "0 auto 30px"
           }}></div>
-          
+
           <p className="quote" style={{
             fontSize: "22px",
             fontStyle: "italic",
@@ -181,50 +244,49 @@ export default function Home() {
           }}>
             "Meu trabalho é te ajudar a transformar o caos interno em clareza, direção e ações possíveis."
           </p>
-          
+
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "center", textAlign: "left" }}>
             <div>
-              <p style={{ 
-                fontSize: "1.125rem", 
-                lineHeight: "1.7", 
-                marginBottom: "1.5rem", 
-                color: "#555" 
+              <p style={{
+                fontSize: "1.125rem",
+                lineHeight: "1.7",
+                marginBottom: "1.5rem",
+                color: "#555"
               }}>
-                Sou psicóloga clínica e trabalho todos os dias com mulheres que fazem muito, sentem demais e chegam exaustas — com cansaço constante, mente acelerada, culpa por descansar, irritabilidade, ansiedade alta e a sensação de que estão sempre "devendo" em alguma área da vida.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia dicta ullam debitis enim minus dolore, perferendis quisquam, repellat numquam tenetur ad recusandae sint quo, minima cum aperiam maiores inventore sunt.
               </p>
-              <p style={{ 
-                fontSize: "1.125rem", 
-                lineHeight: "1.7", 
-                marginBottom: "1.5rem", 
-                color: "#555" 
+              <p style={{
+                fontSize: "1.125rem",
+                lineHeight: "1.7",
+                marginBottom: "1.5rem",
+                color: "#555"
               }}>
-                Meu trabalho não é te convencer a ser mais forte ou a "dar conta de tudo". É te ajudar a entender o que está acontecendo de verdade — identificar padrões como autoexigência excessiva, sobrecarga crônica, dificuldade de dizer não, medo de decepcionar e desorganização emocional.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente perspiciatis et ipsum vitae soluta, possimus reiciendis, optio aliquid necessitatibus, voluptatem ipsam dolorum! Molestiae, est. Perferendis et cupiditate cumque quidem enim.
               </p>
             </div>
-            <div style={{ 
-              backgroundColor: "#F5F2ED", 
-              padding: "2.5rem", 
+            <div style={{
+              backgroundColor: "#F5F2ED",
+              padding: "2.5rem",
               borderRadius: "15px",
               border: "1px solid #eee"
             }}>
-              <h3 style={{ 
-                fontSize: "1.5rem", 
-                marginBottom: "1rem", 
-                color: "#1a1a1a" 
+              <h3 style={{
+                fontSize: "1.5rem",
+                marginBottom: "1rem",
+                color: "#1a1a1a"
               }}>
                 Formação e Credenciais
               </h3>
-              <p style={{ 
-                fontSize: "1.125rem", 
-                lineHeight: "1.7", 
+              <p style={{
+                fontSize: "1.125rem",
+                lineHeight: "1.7",
                 color: "#555",
                 marginBottom: "1rem"
               }}>
-                • CRP 01/26914<br/>
-                • Formação em Terapias Cognitivo-Comportamentais<br/>
-                • Certificação no método Italo Marsili – CIM<br/>
-                • Especialização em Psicopatologia<br/>
-                • 12 Camadas da Personalidade
+                • CRP 00/00000<br />
+                • Formação em Terapias Cognitivo-Comportamentais<br />
+                • Certificação em -<br />
+                • Especialização em -<br />
               </p>
             </div>
           </div>
@@ -232,31 +294,31 @@ export default function Home() {
       </section>
 
       {/* Serviços Section */}
-      <section 
-        id="servicos" 
+      <section
+        id="servicos"
         className="section-beige"
-        style={{ 
-          padding: "100px 10%", 
+        style={{
+          padding: "100px 10%",
           backgroundColor: "#F5F2ED",
           textAlign: "center"
         }}
       >
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <h2 style={{ 
-            fontSize: "28px", 
-            marginBottom: "20px", 
+          <h2 style={{
+            fontSize: "28px",
+            marginBottom: "20px",
             color: "#1a1a1a"
           }}>
             Como posso te ajudar
           </h2>
-          
-          <div style={{ 
-            width: "50px", 
-            height: "2px", 
+
+          <div style={{
+            width: "50px",
+            height: "2px",
             background: "#B89470",
             margin: "0 auto 30px"
           }}></div>
-          
+
           <div className="services-grid" style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
@@ -264,12 +326,12 @@ export default function Home() {
             marginTop: "50px"
           }}>
             {services.map((service, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="service-card"
-                style={{ 
-                  backgroundColor: "white", 
-                  padding: "40px 25px", 
+                style={{
+                  backgroundColor: "white",
+                  padding: "40px 25px",
                   borderRadius: "15px",
                   border: "1px solid #eee",
                   fontWeight: "600",
@@ -285,15 +347,15 @@ export default function Home() {
                   e.currentTarget.style.boxShadow = "none";
                 }}
               >
-                <h3 style={{ 
-                  fontSize: "1.5rem", 
-                  marginBottom: "1rem", 
-                  color: "#B89470" 
+                <h3 style={{
+                  fontSize: "1.5rem",
+                  marginBottom: "1rem",
+                  color: "#B89470"
                 }}>
                   {service.title}
                 </h3>
-                <p style={{ 
-                  lineHeight: "1.6", 
+                <p style={{
+                  lineHeight: "1.6",
                   color: "#666",
                   fontWeight: "normal",
                   fontSize: "15px"
@@ -307,51 +369,51 @@ export default function Home() {
       </section>
 
       {/* Benefícios da Terapia Online */}
-      <section 
+      <section
         className="section-white"
-        style={{ 
-          padding: "100px 10%", 
+        style={{
+          padding: "100px 10%",
           backgroundColor: "white",
           textAlign: "center"
         }}
       >
         <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
-          <h2 style={{ 
-            fontSize: "28px", 
-            marginBottom: "20px", 
+          <h2 style={{
+            fontSize: "28px",
+            marginBottom: "20px",
             color: "#1a1a1a"
           }}>
             Por que fazer terapia online?
           </h2>
-          
-          <div style={{ 
-            width: "50px", 
-            height: "2px", 
+
+          <div style={{
+            width: "50px",
+            height: "2px",
             background: "#B89470",
             margin: "0 auto 30px"
           }}></div>
-          
-          <div style={{ 
-            display: "grid", 
-            gridTemplateColumns: "repeat(2, 1fr)", 
+
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(2, 1fr)",
             gap: "40px",
             textAlign: "left"
           }}>
             {benefits.map((benefit, index) => (
-              <div key={index} style={{ 
-                display: "flex", 
-                alignItems: "flex-start", 
+              <div key={index} style={{
+                display: "flex",
+                alignItems: "flex-start",
                 gap: "1.5rem",
                 backgroundColor: "#F5F2ED",
                 padding: "30px",
                 borderRadius: "15px",
                 border: "1px solid #eee"
               }}>
-                <div style={{ 
-                  backgroundColor: "#B89470", 
-                  color: "white", 
-                  width: "50px", 
-                  height: "50px", 
+                <div style={{
+                  backgroundColor: "#B89470",
+                  color: "white",
+                  width: "50px",
+                  height: "50px",
                   borderRadius: "50%",
                   display: "flex",
                   alignItems: "center",
@@ -363,16 +425,16 @@ export default function Home() {
                   {index + 1}
                 </div>
                 <div>
-                  <h3 style={{ 
-                    fontSize: "1.25rem", 
-                    marginBottom: "0.5rem", 
-                    color: "#1a1a1a" 
+                  <h3 style={{
+                    fontSize: "1.25rem",
+                    marginBottom: "0.5rem",
+                    color: "#1a1a1a"
                   }}>
                     {benefit.title}
                   </h3>
-                  <p style={{ 
-                    lineHeight: "1.6", 
-                    color: "#666" 
+                  <p style={{
+                    lineHeight: "1.6",
+                    color: "#666"
                   }}>
                     {benefit.description}
                   </p>
@@ -384,41 +446,41 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section style={{ 
-        padding: "100px 10%", 
-        backgroundColor: "#B89470", 
+      <section style={{
+        padding: "100px 10%",
+        backgroundColor: "#B89470",
         textAlign: "center"
       }}>
-        <h2 style={{ 
-          fontSize: "28px", 
-          marginBottom: "20px", 
-          color: "white" 
+        <h2 style={{
+          fontSize: "28px",
+          marginBottom: "20px",
+          color: "white"
         }}>
           Vamos juntas organizar a sua vida?
         </h2>
-        
-        <div style={{ 
-            width: "50px", 
-            height: "2px", 
-            background: "white",
-            margin: "0 auto 30px",
-            opacity: "0.8"
-          }}></div>
-        
-        <p style={{ 
-          fontSize: "18px", 
-          marginBottom: "40px", 
-          color: "rgba(255,255,255,0.95)", 
-          maxWidth: "700px", 
-          marginLeft: "auto", 
+
+        <div style={{
+          width: "50px",
+          height: "2px",
+          background: "white",
+          margin: "0 auto 30px",
+          opacity: "0.8"
+        }}></div>
+
+        <p style={{
+          fontSize: "18px",
+          marginBottom: "40px",
+          color: "rgba(255,255,255,0.95)",
+          maxWidth: "700px",
+          marginLeft: "auto",
           marginRight: "auto",
           lineHeight: "1.6"
         }}>
           Se você sente que chegou no limite e precisa de um acompanhamento sério, humano e prático, estou aqui para caminhar com você.
         </p>
-        <a 
-          href="https://wa.me/55999999999" 
-          target="_blank" 
+        <a
+          href="https://wa.me/55999999999"
+          target="_blank"
           rel="noopener noreferrer"
           style={{
             backgroundColor: "white",
@@ -446,42 +508,42 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section 
-        id="faq" 
+      <section
+        id="faq"
         className="section-beige"
-        style={{ 
-          padding: "100px 10%", 
+        style={{
+          padding: "100px 10%",
           backgroundColor: "#F5F2ED",
           textAlign: "center"
         }}
       >
         <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-          <h2 style={{ 
-            fontSize: "28px", 
-            marginBottom: "20px", 
+          <h2 style={{
+            fontSize: "28px",
+            marginBottom: "20px",
             color: "#1a1a1a"
           }}>
             Dúvidas frequentes
           </h2>
-          
-          <div style={{ 
-            width: "50px", 
-            height: "2px", 
+
+          <div style={{
+            width: "50px",
+            height: "2px",
             background: "#B89470",
             margin: "0 auto 30px"
           }}></div>
-          
-          <div style={{ 
-            display: "flex", 
-            flexDirection: "column", 
+
+          <div style={{
+            display: "flex",
+            flexDirection: "column",
             gap: "15px",
             textAlign: "left"
           }}>
             {faqItems.map((item) => (
-              <div 
-                key={item.id} 
-                style={{ 
-                  backgroundColor: "white", 
+              <div
+                key={item.id}
+                style={{
+                  backgroundColor: "white",
                   borderRadius: "15px",
                   overflow: "hidden",
                   border: "1px solid #eee"
@@ -517,8 +579,8 @@ export default function Home() {
                   }}
                 >
                   {item.question}
-                  <span style={{ 
-                    fontSize: "1.5rem", 
+                  <span style={{
+                    fontSize: "1.5rem",
                     color: "#B89470",
                     transition: "transform 0.3s ease",
                     transform: activeFaq === item.id ? "rotate(45deg)" : "rotate(0)"
@@ -527,14 +589,14 @@ export default function Home() {
                   </span>
                 </button>
                 {activeFaq === item.id && (
-                  <div style={{ 
-                    padding: "25px 30px", 
+                  <div style={{
+                    padding: "25px 30px",
                     borderTop: "1px solid #eee",
                     backgroundColor: "#F5F2ED"
                   }}>
-                    <p style={{ 
-                      lineHeight: "1.6", 
-                      color: "#666", 
+                    <p style={{
+                      lineHeight: "1.6",
+                      color: "#666",
                       margin: 0,
                       fontSize: "16px"
                     }}>
@@ -549,43 +611,43 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer style={{ 
-        padding: "60px 10%", 
-        backgroundColor: "#1a1a1a", 
+      {/* <footer style={{
+        padding: "60px 10%",
+        backgroundColor: "#1a1a1a",
         color: "white",
         textAlign: "center"
       }}>
         <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-          <p style={{ 
-            marginBottom: "30px", 
-            lineHeight: "1.6", 
+          <p style={{
+            marginBottom: "30px",
+            lineHeight: "1.6",
             color: "rgba(255,255,255,0.8)",
             fontSize: "15px",
             padding: "20px",
             backgroundColor: "rgba(0,0,0,0.2)",
             borderRadius: "10px"
           }}>
-            <strong>Atenção:</strong> Este site não oferece atendimento imediato a pessoas em crise suicida. 
-            Em caso de crise ligue para o CVV – 188. Em caso de emergência, procure o hospital mais próximo. 
+            <strong>Atenção:</strong> Este site não oferece atendimento imediato a pessoas em crise suicida.
+            Em caso de crise ligue para o CVV – 188. Em caso de emergência, procure o hospital mais próximo.
             Havendo risco de morte, ligue imediatamente para o SAMU (telefone 192).
           </p>
-          <p style={{ 
-            fontSize: "14px", 
+          <p style={{
+            fontSize: "14px",
             color: "rgba(255,255,255,0.6)",
             marginBottom: "10px"
           }}>
             Psicóloga Amanda Barbacena • CRP 01/26914<br />
             Atendimento online para mulheres • Terapia baseada em evidências
           </p>
-          <p style={{ 
-            fontSize: "12px", 
-            marginTop: "30px", 
-            color: "rgba(255,255,255,0.5)" 
+          <p style={{
+            fontSize: "12px",
+            marginTop: "30px",
+            color: "rgba(255,255,255,0.5)"
           }}>
             Todos os direitos reservados {new Date().getFullYear()}©
           </p>
         </div>
-      </footer>
+      </footer> */}
 
       <style>{`
         .navbar {
