@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Header from "../components/Header";
 
 export default function Home() {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
@@ -49,30 +50,7 @@ export default function Home() {
       }
     `}</style>
 
-      <header className="navbar" style={{ position: "sticky", top: 0, zIndex: 1000 }}>
-        <div className="logo" style={{ fontWeight: "bold", letterSpacing: "2px", color: "#B89470", fontSize: "1.5rem" }}>
-          Ananda Motta
-        </div>
-        <nav>
-          <ul style={{ display: "flex", listStyle: "none", gap: "1.5rem", alignItems: "center" }}>
-            {["Home", "Sobre Mim", "Posso te ajudar?", "Dúvidas Frequentes"].map((item) => (
-              <li key={item}>
-                <a
-                  href={`#${item.toLowerCase()}`}
-                  style={{
-                    textDecoration: "none",
-                    color: "#666",
-                    fontSize: "14px",
-                    textTransform: "uppercase"
-                  }}
-                >
-                  {item}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </header>
+      <Header />
 
       <section
         id="inicio"
@@ -82,7 +60,7 @@ export default function Home() {
           alignItems: "center",
           justifyContent: "space-between",
           padding: "0 20%",
-          backgroundColor: "#FAF9F6",
+          backgroundColor: "#FAF9F6", // Mantive o Off-white (Creme), combina muito bem
           gap: "2rem",
           flexWrap: "wrap"
         }}
@@ -92,7 +70,7 @@ export default function Home() {
           <h1
             style={{
               fontSize: "clamp(2.2rem, 4vw, 3rem)",
-              color: "#8FAF7C",
+              color: "#5D4037", // MUDANÇA: Marrom Café Escuro para contraste
               fontWeight: "700",
               lineHeight: "1.25",
               marginBottom: "20px"
@@ -106,8 +84,9 @@ export default function Home() {
           <p
             style={{
               fontSize: "15px",
-              color: "#8FAF7C",
-              marginBottom: "20px"
+              color: "#A07855", // MUDANÇA: Marrom Terroso (substituindo o verde)
+              marginBottom: "20px",
+              fontWeight: "500" // Um leve peso ajuda na leitura dessa cor
             }}
           >
             Para mulheres que fazem muito, sentem demais e vivem no limite.
@@ -116,7 +95,7 @@ export default function Home() {
           <p
             style={{
               fontSize: "16px",
-              color: "#6f6f6f",
+              color: "#6f6f6f", // Cinza neutro mantido
               lineHeight: "1.7",
               marginBottom: "35px"
             }}
@@ -134,7 +113,7 @@ export default function Home() {
             rel="noopener noreferrer"
             style={{
               display: "inline-block",
-              backgroundColor: "#FFA000",
+              backgroundColor: "#A07855",
               color: "#fff",
               padding: "16px 32px",
               borderRadius: "999px",
@@ -142,14 +121,12 @@ export default function Home() {
               fontWeight: "600",
               fontSize: "15px",
               transition: "all 0.3s ease",
-              boxShadow: "0 8px 20px rgba(255,160,0,0.25)"
+              boxShadow: "0 8px 20px rgba(224, 159, 62, 0.25)"
             }}
             onMouseOver={(e) => {
-              e.currentTarget.style.backgroundColor = "#e89000";
               e.currentTarget.style.transform = "translateY(-2px)";
             }}
             onMouseOut={(e) => {
-              e.currentTarget.style.backgroundColor = "#FFA000";
               e.currentTarget.style.transform = "translateY(0)";
             }}
           >
@@ -174,7 +151,8 @@ export default function Home() {
               right: "-12px",
               bottom: "-12px",
               borderRadius: "28px",
-              background: "linear-gradient(145deg, #9CB58B, #8FAF7C)",
+              // MUDANÇA: Degradê Terroso (Bege escuro para Marrom Argila)
+              background: "linear-gradient(145deg, #CBB6A8, #A07855)",
               opacity: 0.9,
               zIndex: 0
             }}
@@ -186,7 +164,7 @@ export default function Home() {
               position: "absolute",
               inset: "0",
               borderRadius: "28px",
-              boxShadow: "0 25px 60px rgba(0,0,0,0.12)",
+              boxShadow: "0 25px 60px rgba(93, 64, 55, 0.15)", // Sombra levemente marrom
               zIndex: 0
             }}
           />
@@ -609,45 +587,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      {/* <footer style={{
-        padding: "60px 10%",
-        backgroundColor: "#1a1a1a",
-        color: "white",
-        textAlign: "center"
-      }}>
-        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-          <p style={{
-            marginBottom: "30px",
-            lineHeight: "1.6",
-            color: "rgba(255,255,255,0.8)",
-            fontSize: "15px",
-            padding: "20px",
-            backgroundColor: "rgba(0,0,0,0.2)",
-            borderRadius: "10px"
-          }}>
-            <strong>Atenção:</strong> Este site não oferece atendimento imediato a pessoas em crise suicida.
-            Em caso de crise ligue para o CVV – 188. Em caso de emergência, procure o hospital mais próximo.
-            Havendo risco de morte, ligue imediatamente para o SAMU (telefone 192).
-          </p>
-          <p style={{
-            fontSize: "14px",
-            color: "rgba(255,255,255,0.6)",
-            marginBottom: "10px"
-          }}>
-            Psicóloga Amanda Barbacena • CRP 01/26914<br />
-            Atendimento online para mulheres • Terapia baseada em evidências
-          </p>
-          <p style={{
-            fontSize: "12px",
-            marginTop: "30px",
-            color: "rgba(255,255,255,0.5)"
-          }}>
-            Todos os direitos reservados {new Date().getFullYear()}©
-          </p>
-        </div>
-      </footer> */}
 
       <style>{`
         .navbar {
