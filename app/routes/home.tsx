@@ -78,7 +78,7 @@ export default function Home() {
           >
             PSICÓLOGA ONLINE<br />
             ESPECIALIZADA EM<br />
-            MULHERES EXAUSTAS
+            MULHERES
           </h1>
 
           <p
@@ -231,7 +231,7 @@ export default function Home() {
                 marginBottom: "1.5rem",
                 color: "#555"
               }}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia dicta ullam debitis enim minus dolore, perferendis quisquam, repellat numquam tenetur ad recusandae sint quo, minima cum aperiam maiores inventore sunt.
+                Sou psicóloga clínica e realizo atendimentos online voltados exclusivamente para mulheres. Meu trabalho é fundamentado na Terapia Cognitivo-Comportamental (TCC), uma abordagem baseada em evidências que nos ajuda a compreender a relação entre pensamentos, emoções e comportamentos.
               </p>
               <p style={{
                 fontSize: "1.125rem",
@@ -239,7 +239,8 @@ export default function Home() {
                 marginBottom: "1.5rem",
                 color: "#555"
               }}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente perspiciatis et ipsum vitae soluta, possimus reiciendis, optio aliquid necessitatibus, voluptatem ipsam dolorum! Molestiae, est. Perferendis et cupiditate cumque quidem enim.
+                Acredito que cuidar das emoções é um passo essencial para fortalecer a autonomia, a autoestima e a capacidade de fazer escolhas mais conscientes. Na terapia, construímos juntas um espaço seguro de escuta, reflexão e desenvolvimento de habilidades emocionais, para que você possa se posicionar com mais clareza, segurança e autenticidade na sua própria vida.
+                Se você sente que é hora de olhar com mais cuidado para si mesma, será um prazer caminhar ao seu lado nesse processo.
               </p>
             </div>
             <div style={{
